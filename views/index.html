@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button!</title>
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+         
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript" src ="/static/app.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+              $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+            
+            var name= prompt('Please Sign in with your Name');
+            var socket = io.connect();          
+            socket.emit('sign_in', {info: name });
+            $
+            
+        });
+    
+    </script>
+    
+    
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="row">
+            <h2 class="col s10">Conversation Board</h2>
+        </div>
+        
+        <div class="row">
+            <div id = 'chatBoard' class="col s10 m6">
+                <div class="row">
+                    <p class="">User:  <p>Stuff said...</p></p>
+                </div>
+                <div class="row">
+                    <p class="">Other User:  <p>other Stuff said...</p></p>
+                </div>
+            </div>
+        </div>
+    
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                  <label for="icon_prefix2"></label>
+                </div>
+              </div>
+            </form>
+          </div>
+        
+<!--    <p id="signIn"></p>-->
+    
+    
+    </div>
+</body>
+</html>

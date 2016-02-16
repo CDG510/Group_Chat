@@ -1,0 +1,18 @@
+* {
+    margin:0;
+    padding: 0;
+}        
+
+        
+#chatBoard{
+    margin-left: 0px;
+    
+}
+
+#chat {
+    border: 2px solid black;
+    padding: 10px 10px 0px 0px;
+    height: 300px;
+    overflow:scroll;
+    
+}
